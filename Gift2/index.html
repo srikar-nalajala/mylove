@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>	
+
+    <div id="page1" class="container">
+        <div class="header-images">
+            <span>🌹</span><span>💖</span><span>🌹</span>
+        </div>
+        <h1>Hey there, <br> Will you be my Valentine?</h1>
+        <div class="buttons">
+            <button class="yes-btn" onclick="nextPage('page2')">YES OF COURSE</button>
+            <button id="noButton" class="no-btn" onmouseover="moveButton()">NO THANK YOU</button>
+        </div>
+    </div>
+
+    <div id="page2" class="container" style="display:none;">
+        <h1>Yay, you said yes!</h1>
+        <p>I made all these for you, babe</p>
+        <div class="gift-grid">
+            <button onclick="nextPage('gift1')">Gift 1</button>
+            <button onclick="nextPage('gift2')">Gift 2</button>
+            <button onclick="nextPage('gift3')">Gift 3</button>
+        </div>
+    </div>
+
+  <div id="gift1" class="container" style="display:none;">
+    <h1>Your Rose Bouquet</h1>
+    
+    <div class="image-container">
+        <img src="rose.jpg" alt="Blue Roses" class="gift-img">
+    </div>
+
+    <p class="quote">"You will always be my only option."</p>
+    <button class="back-btn" onclick="nextPage('page2')">Back</button>
+</div>
+
+    <div id="gift2" class="container letter-paper" style="display:none;">
+        <div class="letter-header"><span class="xoxo">XOXO</span></div>
+        <div class="letter-body">
+            <h3>To the love of my life,</h3>
+            <p>You make my life so meaningful and I am so lucky to have you as my Valentine this year. I love you wholeheartedly and I can't wait to continue loving you for the rest of my life.</p>
+            <p>I know I tell you this everyday but you are literally the most beautiful girl I know. Anyways, I love you.</p>
+            <p><strong>Always, Forever</strong></p>
+        </div>
+        <div style="text-align: center; font-size: 40px;">🐷</div>
+        <button class="back-btn" onclick="nextPage('page2')">Back</button>
+    </div>
+
+    <div id="gift3" class="container" style="display:none;">
+        <h1>A special video for you</h1>
+        <div class="video-wrapper">
+            <video width="100%" controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button class="back-btn" onclick="nextPage('page1')">Restart ❤️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
